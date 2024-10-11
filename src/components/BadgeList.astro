@@ -1,0 +1,22 @@
+---
+import Badge from './Badge.astro'
+
+interface Props {
+    title: string
+    array: string[] | undefined
+}
+
+const { title, array } = Astro.props
+
+---
+
+<section class="flex flex-col mt-6 mb-6">
+    <h1 class="text-sm font-bold opacity-80 ">{title}</h1>
+    <aside class="flex flex-wrap gap-2 mt-2">
+        {array && array.length > 0 ? array.map((element) => (
+            <Badge 
+                content={element}
+            />
+        )) : ""}
+    </aside>
+</section>

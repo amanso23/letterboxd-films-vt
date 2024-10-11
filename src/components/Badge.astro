@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+
+interface Props {
+    content: string
+
+}
+
+const { content } = Astro.props
+
+
+---
+
+<span class="px-1.5 py-0.5 transition-colors duration-200 bg-[#303840] hover:bg-[#53616e] text-slate-300 rounded-lg text-sm">
+    {content}
+</span>
+
